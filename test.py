@@ -76,7 +76,7 @@ def get_head(domain='', times=0):
     except requests.exceptions.ReadTimeout:
         get_head(domain, times + 1)
     except Exception as ex:
-        print(ex.args[0])
+        print(domain + str(ex.args[0]))
 
 
 def ten_to_thirty_six(num):
